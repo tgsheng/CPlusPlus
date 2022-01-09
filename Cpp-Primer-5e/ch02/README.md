@@ -25,7 +25,7 @@ std::cout << u - i << std::endl;
 
 **Explanation**
 
-The result of `u - u2`, -32, won't fit in an `unsigned` value. -32 will be transformed to an `unsigned` value. Assuming 32-bit `int`s, converting an `int` to `unsigned` is to add $2^{32}$ to it.
+The result of `u - u2`, -32, won't fit in an `unsigned` value. -32 will be transformed to an `unsigned` value. Assuming 32-bit `int`, converting an `int` to `unsigned` is to add $2^{32}$ to it.
 
 For example, the loop below will never terminate, because `u` is a `unsigned` value, which never less than 0.
 ```cpp
