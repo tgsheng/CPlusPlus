@@ -62,4 +62,22 @@ int main()
 
 `local_str` is also a local variable which is unitialized, but it has a value, empty string, that is defined by the class.
 
+**Explanation**
 
+Uninitialized objects of built-in type defined inside a function body have undefined value. Objects of class type that we do not explicitly initialize have a value that is defined by the class. So we recommend initializing every object of built-in type.
+
+## Exercise 2.11
+> Explain whether each of the following is a declaration or a definition:
+```cpp
+    extern int ix = 1024; // (a) definition
+    int iy;               // (b) definition
+    extern int iz;        // (c) declaration
+```
+
+**Note**
+
+A variable declaration specifies the type and name of a variable. . In addition to specifying the name and type, a definition also allocates storage and may provide the variable with an initial value.
+
+Any declaration that includes an explicit initializer is a definition, such as (a).
+
+Variables must be defined exactly once but can be declared many times.
