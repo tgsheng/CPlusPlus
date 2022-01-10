@@ -37,4 +37,4 @@ inline Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
   return sum;
 }
 
-#endif /* CP5_ex7_05_H */
+#endif /* CP5_ex7_06_H */
