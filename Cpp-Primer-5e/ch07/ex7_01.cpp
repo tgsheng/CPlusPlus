@@ -1,6 +1,6 @@
 #include <iostream>
 
-struct Sales_data { // the default access level is public
+struct Sales_data {
   std::string bookNo;
   unsigned units_sold = 0;
   double revenue = 0.0;
@@ -8,8 +8,7 @@ struct Sales_data { // the default access level is public
 
 int main() {
   Sales_data total;
-  if (std::cin >> total.bookNo >> total.units_sold >>
-      total.revenue) { // we don't overload operator>> for Sales_data
+  if (std::cin >> total.bookNo >> total.units_sold >> total.revenue) {
     Sales_data trans;
     while (std::cin >> trans.bookNo >> trans.units_sold >> trans.revenue) {
       if (total.bookNo == trans.bookNo) {
@@ -17,8 +16,7 @@ int main() {
         total.revenue += trans.revenue;
       } else {
         std::cout << total.bookNo << ' ' << total.units_sold << ' '
-                  << total.revenue
-                  << std::endl; // we don't overload operator<< for Sales_data
+                  << total.revenue << std::endl;
         total = trans;
       }
     }
@@ -30,3 +28,11 @@ int main() {
   }
   return 0;
 }
+
+/* We cannot directly get a Sales_data object to std::cin using
+    std::cin >> total;
+  because we haven't overloaded operator>> for Sales_data. We can 
+  directly manipulate the members of Sales_data, because the default 
+  access level of struct is public. So we assign each member using
+    std::cin >> total.bookNo >> total.units_sold >> total.revenue;
+*/
