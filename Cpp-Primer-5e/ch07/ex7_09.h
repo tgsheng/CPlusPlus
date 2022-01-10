@@ -1,5 +1,5 @@
-#ifndef CP5_ex7_05_H
-#define CP5_ex7_05_H
+#ifndef CP5_ex7_09_H
+#define CP5_ex7_09_H
 
 #include <iostream>
 #include <string>
@@ -20,4 +20,4 @@ inline std::ostream &print(std::ostream &os, const Person &person) {
   return os << person.get_name() << " " << person.get_addr();
 }
 
-#endif /* CP5_ex7_05_H */
+#endif /* CP5_ex7_09_H */
