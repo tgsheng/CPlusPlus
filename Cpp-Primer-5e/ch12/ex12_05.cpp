@@ -4,9 +4,9 @@
 void test(const StrBlob &strBlob) { return; }
 
 /*
-When a constructor is declared explicit, it can be used only with the
-direct form of initialization (§ 3.2.1, p. 84). Moroever, the compiler will
-not use this constructor in an automatic conversion
+When a constructor is declared explicit, it can be used only with the direct 
+form of initialization (§ 3.2.1, p. 84). Moroever, the compiler will not use 
+this constructor in an automatic conversion.
 */
 
 int main() {
